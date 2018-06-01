@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>帧动画</title>
+	<style type="text/css">
+		img {
+            display: none;
+        }
+	</style>
+</head>
+<body>
+	<canvas id="cvs" width="500" height="500"></canvas>
+	<img src="NPC3.png">
+	<script type="text/javascript" src="person.js"></script>
+	<script type="text/javascript">
+		var cvs = document.getElementById('cvs');
+        var ctx = cvs.getContext('2d');
+        var img = document.querySelector('img');
+        img.onload = function () {
+        	var person = new Person(ctx,img,4,4,50,50,50,50);
+
+        	person.bind();
+
+        	person.direction = 2;
+
+        	setInterval(function () {
+        		ctx.clearRect(0,0,cvs.width,cvs.height);
+       			person.draw();
+       			person.currentFrame = ++person.currentFrame >= person.widthFrame ? 0 : person.currentFrame;
+
+       			person.update();
+        	},100);
+        }
+	</script>
+</body>
+</html>

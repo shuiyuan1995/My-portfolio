@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>筋斗云</title>
+	<style type="text/css">
+	* {
+		margin: 0;
+		padding: 0;
+	}
+	body {
+		background: rgba(0,0,0,0.8);
+	}
+	.box {
+		width: 800px;
+		height: 42px;
+		background: #fff url(img/wifi.png) right center no-repeat;
+		margin: 200px auto;
+		border-radius: 8px;
+		position: relative;
+	}
+	ul {
+		list-style: none;
+		position: relative;
+	}
+	li {
+		float: left;
+		width: 83px;
+		height: 42px;
+		text-align: center;
+		font: 500 16px/42px "simsun";
+		cursor:pointer;
+	} 
+	span {
+		position: absolute;
+		width: 83px;
+		height: 42px;
+		left: 0;
+		top: 0;
+		background: url(img/cloud.gif) no-repeat;
+	}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<span></span>
+		<ul>
+			<li>首页新闻</li>
+			<li>活动策划</li>
+			<li>师资力量</li>
+			<li>企业文化</li>
+			<li>招聘信息</li>
+			<li>公司简介</li>
+			<li>上海校区</li>
+			<li>广州校区</li>
+		</ul>
+	</div>
+	<script type="text/javascript">
+		window.onload = function () {
+			//绑定事件源
+			var liArr = document.getElementsByTagName('li');
+			var span = document.getElementsByTagName('span')[0];
+			var liW = liArr[0].offsetWidth;
+			//绑定事件
+			for (var i = 0; i < liArr.length; i++) {
+				liArr[i].index = i;
+				var oldLeft = span.offsetLeft;
+				//鼠标进入
+				liArr[i].onmouseover = function () {
+					var left = this.offsetLeft;
+					animate(span,this.index*liW);
+				}
+				//鼠标离开
+				liArr[i].onmouseout = function () {
+					animate(span,oldLeft);
+				}
+				// 鼠标点击
+				liArr[i].onclick = function () {
+					animate(span,this.index*liW);
+					oldLeft = this.index*liW;
+				}
+			}
+			//动画封装
+	function animate(ele,target) {
+        //要用定时器，先清定时器
+        //一个萝卜一个坑儿，一个元素对应一个定时器
+        clearInterval(ele.timer);
+        //定义定时器
+        ele.timer = setInterval(function () {
+            //获取步长
+            //步长应该是越来越小的，缓动的算法。
+            var step = (target-ele.offsetLeft)/10;
+            //对步长进行二次加工(大于0向上取整,小于0项下取整)
+            step = step>0?Math.ceil(step):Math.floor(step);
+            //动画原理： 目标位置 = 当前位置 + 步长
+            ele.style.left = ele.offsetLeft + step + "px";
+            //检测缓动动画有没有停止
+            console.log(1);
+            if(Math.abs(target-ele.offsetLeft)<=Math.abs(step)){
+                //处理小数赋值
+                ele.style.left = target + "px";
+                clearInterval(ele.timer);
+            }
+        },30);
+    }
+		}
+	</script>
+</body>
+</html>
