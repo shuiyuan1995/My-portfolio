@@ -1,0 +1,106 @@
+{
+  "basis": {
+    "post":"web前端工程师",
+    "info": {
+      "姓名":"朱培源",
+      "出生日期": "05-02-1996",
+      "电话": "18423433949",
+      "QQ": "1353880213",
+      "e-mail": "1353880213@qq.com",
+      "github": "https://github.com/shuiyuan1995"
+    },
+    "icons": [["18423433949","1353880213@qq.com"],["https://codepen.io/shuiyuan/","https://github.com/shuiyuan1995"]],
+    "photo":"https://raw.githubusercontent.com/shuiyuan1995/My-portfolio/master/My-photo/me.jpg"
+  },
+  "about": {
+    "mains": [
+      {
+        "title": "年龄/22岁",
+        "content1": "年轻的力量",
+        "content2": "我拥有充沛的精力"
+      },
+      {
+        "title": "学历/专科",
+        "content1": "这并不是全部",
+        "content2": "它并不能代表我的人生"
+      },
+      {
+        "title": "住址/重庆",
+        "content1": "美丽的城市",
+        "content2": "它会让我更热情的工作"
+      },
+      {
+        "title": "状态/待业",
+        "content1": "等待你的召唤",
+        "content2": "它会让我随叫随到，不离不弃的等待召唤"
+      }
+    ]
+  },
+  "skill": {
+    "dsc":["精通HTML CSS；能快速切图重构设计图稿，高度还原设计稿95%以上将UI设计转化为符合W3C规范的DIV+CSS静态页面，能确保浏览器及平台的性能和兼容性 能够书有严苛的编码风格和良好的编码习惯","掌握原生JS的编程，熟练面向对象思想，熟练使用ajax异步提交数据，熟练使用json数据","熟悉数据结构与基础算法； 能够使用bootstrap制作网页，也可手写响应式网站","精通jQuery，能使用jQuery手写交互丰富的组件；熟悉的操作DOM","掌握reactjs 熟悉H5新标签，熟悉svg和canvas绘图","掌握es6，熟悉gulp，熟悉webpack 了解nodejs，npm包管理器"],
+    "bar":{
+      "HTML":"70",
+      "css":"75",
+      "js":"68",
+      "jquery":"70",
+      "bootstrap":"60",
+      "vuejs":"65",
+      "webpack":"55"
+    }
+  },
+  "contact": {
+    "target":["目标", "努力", "毅力", "成功"],
+    "p":["请带上我，一起看到更大的世界", "喜欢专注,做事严谨认真", "喜欢思考,理解方能精通", "喜欢学习,学习的心永无止境", "喜欢前端,兴趣铸就未来"]
+  },
+  "experience":[
+    {
+      "year":"2018.6",
+      "content":{
+        "title":"离职",
+        "matter":"向着梦想起航，走向期待的未来"
+      }
+    },
+    {
+      "year":"2017.8",
+      "content":{
+        "title":"重庆数运科技有限公司",
+        "matter":"数据恢复工程师，做着硬盘，U盘，磁盘阵列数据恢复"
+      }
+    },
+    {
+      "year":"2017.7",
+      "content":{
+        "title":"大学毕业，离开学校。",
+        "matter":"离开了大学的殿堂，走向未知的未来"
+      }
+    }
+  ],
+  "porfolio":{
+    "pcs":[
+      {
+        "src":"static/works/pc/01/index.html",
+        "img":"static/works/pc/01/001.png"
+      },
+      {
+        "src":"static/works/pc/02/index.html",
+        "img":"static/works/pc/02/002.png"
+      },
+      {
+        "src":"static/works/pc/03/index.html",
+        "img":"static/works/pc/03/003.png"
+      }
+    ],
+    "apps":[
+      {
+        "src":"static/works/app/01/index.html",
+        "img":"static/works/app/01/001.png"
+      }
+    ],
+    "others":[
+      {
+        "src":"static/works/other/01/index.html",
+        "img":"static/works/other/01/001.png"
+      }
+    ]
+  }
+}
